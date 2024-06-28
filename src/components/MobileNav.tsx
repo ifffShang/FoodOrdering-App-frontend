@@ -5,9 +5,6 @@ import {Menu} from "lucide-react";
 import {useAuth0} from "@auth0/auth0-react";
 import MobileNavLinks from "@/components/MobileNavLinks.tsx";
 
-function CircleUserRound(props: { className: string }) {
-    return null;
-}
 
 const MobileNav = () =>{
     const {isAuthenticated, loginWithRedirect,user} = useAuth0()
@@ -20,7 +17,7 @@ const MobileNav = () =>{
                 <SheetTitle>
                     {isAuthenticated?
                         <span className={"flex items-center font-bold gap-2"}>
-                        <CircleUserRound className={"text-orange-500"}/>
+                        {/*<CircleUserRound className={"text-orange-500"}/>*/}
                             {user?.email}
                         </span> :
                 <span>Welcome to UEats.com</span>
